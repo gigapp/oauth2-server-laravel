@@ -126,7 +126,7 @@ class OAuth2ServerServiceProvider extends ServiceProvider
             }
 
             $checker = $app->make(ResourceServer::class);
-            $checker->setMacStorage($app->make(MacTokenInterface::class));
+            $checker->setMacStorage($app->make(MacTokenInterface::class)); 
 
             $authorizer = new Authorizer($issuer, $checker);
             $authorizer->setRequest($app['request']);
